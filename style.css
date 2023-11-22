@@ -2,6 +2,19 @@ ul,ol,li {
     list-style: none;
 }
 
-.col-4 {
+.col-6 {
     border: 1px solid black;
+    margin-bottom: 0;
+    padding: 20px;
+    text-align: left;
+}
+
+.title {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.blue-bg {
+    background-color: aquamarine;
+    max-width: 100%;
 }

@@ -56,10 +56,10 @@ $hotels = [
     <div class="container text-center">
         <div class="row">
             <?php foreach ($hotels as $hotel) { ?>
-                <ul class="col-4">
+                <ul class="col-6">
                     <?php foreach ($hotel as $key => $value) { ?>
-                        <li>
-                            <?php echo $key; ?> : <?php echo $value; ?>
+                        <li class="<?php if($key === 'name'){ echo 'blue-bg'; } ?>">
+                            <span class="title"><?php echo $key; ?></span> : <?php echo $value; ?>
                         </li>
                     <?php }; ?>
                 </ul>
