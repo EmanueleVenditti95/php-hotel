@@ -40,4 +40,14 @@
 
     ];
 
+    foreach ($hotels as $hotel) {
+        foreach ($hotel as $key => $value) {
+            ?>
+            <li>
+                <?php echo $key; ?> : <?php echo $value; ?>                  
+            </li>
+            <?php
+        }
+    };
+
 ?>
