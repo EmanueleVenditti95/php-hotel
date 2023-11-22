@@ -53,18 +53,42 @@ $hotels = [
 </head>
 
 <body>
+    <form class="container spacing" method="GET">
+        <p>Solo Hotel con parcheggio <input type="checkbox" name="hotel_only"></p>
+    </form>
     <div class="container text-center">
-        <div class="row">
-            <?php foreach ($hotels as $hotel) { ?>
-                <ul class="col-6">
-                    <?php foreach ($hotel as $key => $value) { ?>
-                        <li class="<?php if($key === 'name'){ echo 'blue-bg'; } ?>">
-                            <span class="title"><?php echo $key; ?></span> : <?php echo $value; ?>
-                        </li>
-                    <?php }; ?>
-                </ul>
-            <?php }; ?>
-        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrizione</th>
+                    <th scope="col">Parcheggio</th>
+                    <th scope="col">Voto</th>
+                    <th scope="col">Distanza dal centro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($hotels as $hotel) { ?>
+                    <tr>
+                        <?php foreach ($hotel as $key => $value) { ?>
+                            <td>
+                                <?php if ($key === 'parking' && $value === true) {
+                                    echo 'Dsponibile';
+                                } elseif ($key === 'parking' && $value === false) {
+                                    echo 'Non disponibile';
+                                } elseif ($key === 'distance_to_center') {
+                                    echo $value . ' ' . 'km';
+                                } else {
+                                    echo $value;
+                                }
+                                ?>
+                            </td>
+                        <?php } ?>
+                    </tr>
+                <?php
+                }; ?>
+            </tbody>
+        </table>
     </div>
 
 </body>

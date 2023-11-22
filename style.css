@@ -18,3 +18,8 @@ ul,ol,li {
     background-color: aquamarine;
     max-width: 100%;
 }
+
+.spacing {
+    margin: 20px auto;
+    padding: 0;
+}
