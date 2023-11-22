@@ -1,0 +1,7 @@
+ul,ol,li {
+    list-style: none;
+}
+
+.col-4 {
+    border: 1px solid black;
+}
